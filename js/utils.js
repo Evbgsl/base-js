@@ -1,4 +1,3 @@
-
 /**
  * @function toCapitalize
  * @param {string} str
