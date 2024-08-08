@@ -51,3 +51,23 @@ export const toStationList = (stationListRawData) =>
     const [abbr, name] = station.split(';');
     return `${abbr.slice(0, 3)}: ${name}`;
   });
+
+    /**
+   * @function getAreaOfCountry
+   * @description Returns the area of the country's proportion of the total world's landmass
+   * @param {string} country
+   * @returns {string}
+   */
+  
+    const totalLandMass = 148940000;
+    const countryAreasDictionary = {
+      Russia: 17098242,
+      USA: 9372610,
+      Iran: 1648195,
+    };
+  
+    export const getAreaOfCountry = (country) =>
+      countryAreasDictionary[country]
+        ? `${country} is ${((countryAreasDictionary[country] / totalLandMass) * 100).toFixed(2)}% of the total world's landmass`
+        : `There is no country named ${country} on the map.`;
+        
