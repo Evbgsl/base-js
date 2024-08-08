@@ -9,6 +9,24 @@ export const toCapitalize = (str) => str
   : '';
 
 /**
+ * @function toCapitalizeNames
+ * @param {string[]} names
+ * @returns {string[]}
+ */
+
+export const toCapitalizeNames = (names) => 
+  names.map((word) => `${word[0].toUpperCase()}${word.slice(1)}`);
+
+/**
+ * @function isPalindrome
+ * @param {string} str 
+ * @returns {boolean}
+ */
+
+export const isPalindrome = (str) => 
+  str === str.split('').reverse().join('');
+
+/**
  * @function formatFullNameForDoc
  * @param {string} fullName стёПан ИвАнович СемёНов
  * @returns {string} Степан Иванович Семенов
@@ -21,25 +39,7 @@ export const formatFullNameForDoc = (fullName) => {
 };
 
 /**
- * @function isPalindrome
- * @param {string} str 
- * @returns {boolean}
- */
-
-export const isPalindrome = (str) => 
-  str === str.split('').reverse().join('');
-
-/**
- * @function toCapitalizeNames
- * @param {string[]} names
- * @returns {string[]}
- */
-
-export const toCapitalizeNames = (names) => 
-  names.map((word) => `${word[0].toUpperCase()}${word.slice(1)}`);
-
-/**
- * @function createStationList
+ * @function toStationList
  * @description Concatenates the first 3 characters 
  * (station abbr) and all characters after ';' (station name) using ': '
  * @param {string[]} stationListRawData
