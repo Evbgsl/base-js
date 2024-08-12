@@ -11,6 +11,8 @@
   "type": "module",
   "license": "ISC",
   "devDependencies": {
+    "eslint": "^9.9.0",
+    "globals": "^15.9.0",
     "typescript": "^5.5.4"
   }
 }
