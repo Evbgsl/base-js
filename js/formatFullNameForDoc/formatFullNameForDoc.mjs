@@ -5,9 +5,9 @@
  */
 
 export const formatFullNameForDoc = (fullName) => {
-  const str = fullName.toLowerCase().replaceAll('ё', 'е')
+  const str = fullName.toLowerCase().replaceAll('ё', 'е');
 
   return str.split(' ')
-  .map((word) => `${word[0].toUpperCase()}${word.slice(1)}`)
-  .join(' ');
+    .map((word) => `${word[0].toUpperCase()}${word.slice(1)}`)
+    .join(' ');
 };
